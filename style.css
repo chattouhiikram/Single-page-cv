@@ -1,0 +1,330 @@
+/* ===== STYLE GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #142d4e;
+    --blue: #2463a6;
+    --light-blue: #edf4fb;
+    --text: #263447;
+    --muted: #66758a;
+    --line: #dce5ef;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9eef4;
+    color: var(--text);
+    line-height : 1.45;
+    padding: 30px 15px;
+
+}
+
+.cv {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 8px 35px rgba(20, 45, 78, 0.12);
+}
+
+/* ===== EN-TETE ===== */
+.header {
+    background: var(--navy);
+    color: #fff;
+    padding: 34px 38px  28px;
+    border-radius: 5px solid #4d91d0;
+}
+.eyebrow {
+    color: #9dc9f4;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+.header h1 {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+.header h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #d7e7f8;
+    margin-bottom: 13px;
+}
+.intro {
+    max-width: 680px;
+    font-size: 12px;
+    color: #edf4fb;
+    margin-bottom: 20px;
+}
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 10.5px;
+    color: #e0eaf5;
+}
+/* ===== CONTENU EN DEUX COLONNES ===== */
+.content {
+    display: grid;
+    grid-template-columns: 32%  68%;
+}
+.sidebar {
+    background: #f3f7fb;
+    padding: 26px 23px;
+    border-right: 1px solid var(--line);
+}
+.main-CONTENT {
+    padding: 26px 30px;
+}
+/* ===== SECTIONS ===== */
+SECTION {
+    margin-bottom: 23px;
+    BREAK-INSIDE: avoid
+}
+SECTION:last-child {
+    margin-bottom: 0;
+}
+section h3 {
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    padding-bottom: 8px;
+    margin-bottom: 13px;
+    border-bottom: 2px solid var(--blue);
+}
+.sidebar h4 {
+    color: var(--navy);
+    font-size: 11px;
+    margin: 13px 0 7px;
+}
+/* ===== COMPETENCES ===== */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px ;
+}
+. tag span {
+    background: white;
+    border: 1px solid #d6e2ef;
+    color: #294f79;
+    font-size: 10px;
+    padding: 4px 7px;
+    border-radius: 4px;
+}
+.simple-list {
+    list-style: none;
+    font-size: 11px;
+}
+.simple-list li {
+    padding: 3px 0 3px 12px;
+    position: relative;
+    
+}
+.simple-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 5px;
+    height: 5px;
+    background: var(--blue);
+    border-radius: 50%;
+}
+/* ===== EXPERIENCE ET FORMATION ===== */
+.item {
+    margin-bottom: 17px;
+    break-inside: avoid;
+}
+.item:last-child {
+    margin-bottom: 0;
+}
+.item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.item h4 {
+    font-size: 12px;
+    color: var(--navy);
+    margin-bottom: 4px;
+}
+.date {
+    font-size: 9px;
+    color: var(--blue);
+    font-weight: bold;
+    white-space: nowrap;
+}
+.institution {
+    font-size: 11px;
+    font-weight: bold;
+    margin: 3px 0;
+}
+.muted {
+    color: var(--muted);
+    font-size: 10.5px;
+    margin-bottom: 3px;
+}
+.main-content ul {
+    padding-left: 16px;
+    margin-top: 7px;
+}
+
+.main-content li {
+    font-size: 10.5px;
+    margin-bottom: 4px;
+}
+
+.interests {
+    font-size: 10.5px;
+    line-height: 1.8;
+}
+
+/* ===== PIED DE PAGE ===== */
+footer {
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    padding: 10px;
+    font-size: 9px;
+}
+
+/* ===== AFFICHAGE SUR TELEPHONE ===== */
+@media screen and (max-width: 650px) {
+    body {
+        padding: 0;
+    }
+
+    .header {
+        padding: 25px 20px;
+    }
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .main-content {
+        padding: 24px 20px;
+    }
+}
+
+/* ===== IMPRESSION / PDF ===== */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .cv {
+        width: 210mm;
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .header {
+        padding: 9mm 10mm 7mm;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .header h2 {
+        font-size: 12px;
+    }
+
+    .intro {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .contact {
+        font-size: 9px;
+        gap: 5px 12px;
+    }
+
+    .content {
+        grid-template-columns: 32% 68%;
+    }
+
+    .sidebar {
+        padding: 6mm 5mm;
+    }
+
+    .main-content {
+        padding: 6mm 7mm;
+    }
+
+    section {
+        margin-bottom: 15px;
+    }
+
+    section h3 {
+        font-size: 10px;
+        margin-bottom: 9px;
+        padding-bottom: 5px;
+    }
+
+    .sidebar h4 {
+        font-size: 9.5px;
+        margin: 9px 0 5px;
+    }
+
+    .tags {
+        gap: 3px;
+    }
+
+    .tags span {
+        font-size: 8px;
+        padding: 3px 5px;
+    }
+
+    .simple-list,
+    .institution,
+    .main-content li,
+    .interests {
+        font-size: 9px;
+    }
+
+    .item h4 {
+        font-size: 10px;
+    }
+
+    .muted {
+        font-size: 9px;
+    }
+
+    .item {
+        margin-bottom: 11px;
+    }
+
+    footer {
+        padding: 6px;
+    }
+}
