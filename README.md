@@ -30,4 +30,4 @@ page
 
 ## Auteure
 
-Ikram Chattouhi, étudiante ingénieure en Réseaux, Télécommunications et Systèmes Embarqués (ENSA Tétouan).
+Ikram Chattouhi, étudiante ingénieure en informatique (ENSA Tétouan).
