@@ -1,4 +1,4 @@
-# CV en une 
+# CV en une page
 
 CV personnel en une page, créé en HTML et CSS.
 
